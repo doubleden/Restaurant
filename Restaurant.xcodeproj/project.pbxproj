@@ -6,17 +6,28 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		05B422962E16CCA400ECAD4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05B422922E16CCA400ECAD4D /* Assets.xcassets */; };
+		05B422972E16CCA400ECAD4D /* RestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B422932E16CCA400ECAD4D /* RestaurantView.swift */; };
+		05B422982E16CCA400ECAD4D /* RestaurantApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B422942E16CCA400ECAD4D /* RestaurantApp.swift */; };
+		05B4229B2E16CCCC00ECAD4D /* Cook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B4229A2E16CCCC00ECAD4D /* Cook.swift */; };
+		05B4229D2E16CCE100ECAD4D /* DeliveryMen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B4229C2E16CCE100ECAD4D /* DeliveryMen.swift */; };
+		05B4229F2E16CD1700ECAD4D /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B4229E2E16CD1700ECAD4D /* Order.swift */; };
+		05B422A12E16CDF900ECAD4D /* RestaurantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B422A02E16CDF900ECAD4D /* RestaurantViewModel.swift */; };
+		05FFD23E2E1742AE002782AF /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FFD23D2E1742AE002782AF /* Worker.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		05B422842E16CC4200ECAD4D /* Restaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Restaurant.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		05B422922E16CCA400ECAD4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		05B422932E16CCA400ECAD4D /* RestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantView.swift; sourceTree = "<group>"; };
+		05B422942E16CCA400ECAD4D /* RestaurantApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantApp.swift; sourceTree = "<group>"; };
+		05B4229A2E16CCCC00ECAD4D /* Cook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cook.swift; sourceTree = "<group>"; };
+		05B4229C2E16CCE100ECAD4D /* DeliveryMen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryMen.swift; sourceTree = "<group>"; };
+		05B4229E2E16CD1700ECAD4D /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		05B422A02E16CDF900ECAD4D /* RestaurantViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewModel.swift; sourceTree = "<group>"; };
+		05FFD23D2E1742AE002782AF /* Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		05B422862E16CC4200ECAD4D /* Restaurant */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Restaurant;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		05B422812E16CC4200ECAD4D /* Frameworks */ = {
@@ -32,7 +43,7 @@
 		05B4227B2E16CC4200ECAD4D = {
 			isa = PBXGroup;
 			children = (
-				05B422862E16CC4200ECAD4D /* Restaurant */,
+				05B422952E16CCA400ECAD4D /* Restaurant */,
 				05B422852E16CC4200ECAD4D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +54,37 @@
 				05B422842E16CC4200ECAD4D /* Restaurant.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		05B422952E16CCA400ECAD4D /* Restaurant */ = {
+			isa = PBXGroup;
+			children = (
+				05B422942E16CCA400ECAD4D /* RestaurantApp.swift */,
+				05B422932E16CCA400ECAD4D /* RestaurantView.swift */,
+				05B422A02E16CDF900ECAD4D /* RestaurantViewModel.swift */,
+				05FFD23C2E17429F002782AF /* Protocols */,
+				05B422992E16CCAA00ECAD4D /* Models */,
+				05B422922E16CCA400ECAD4D /* Assets.xcassets */,
+			);
+			path = Restaurant;
+			sourceTree = "<group>";
+		};
+		05B422992E16CCAA00ECAD4D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				05B4229A2E16CCCC00ECAD4D /* Cook.swift */,
+				05B4229C2E16CCE100ECAD4D /* DeliveryMen.swift */,
+				05B4229E2E16CD1700ECAD4D /* Order.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		05FFD23C2E17429F002782AF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				05FFD23D2E1742AE002782AF /* Worker.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +101,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				05B422862E16CC4200ECAD4D /* Restaurant */,
 			);
 			name = Restaurant;
 			packageProductDependencies = (
@@ -109,6 +148,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05B422962E16CCA400ECAD4D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +159,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05B4229D2E16CCE100ECAD4D /* DeliveryMen.swift in Sources */,
+				05B422A12E16CDF900ECAD4D /* RestaurantViewModel.swift in Sources */,
+				05B4229B2E16CCCC00ECAD4D /* Cook.swift in Sources */,
+				05B4229F2E16CD1700ECAD4D /* Order.swift in Sources */,
+				05B422972E16CCA400ECAD4D /* RestaurantView.swift in Sources */,
+				05B422982E16CCA400ECAD4D /* RestaurantApp.swift in Sources */,
+				05FFD23E2E1742AE002782AF /* Worker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
