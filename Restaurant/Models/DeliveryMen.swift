@@ -8,8 +8,8 @@
 import Foundation
 
 actor DeliveryMen: Worker {
-    func makeOrder(completion: @escaping (OrderState) -> Void) {
-        completion(.delivering)
+    func makeOrder(callback: @escaping OrderCallback) {
+        Task {  await callback(.delivering) }
         sleep(UInt32.random(in: 2...5))
     }
 }

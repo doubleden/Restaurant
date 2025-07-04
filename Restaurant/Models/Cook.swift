@@ -8,8 +8,8 @@
 import Foundation
 
 actor Cook: Worker {
-    func makeOrder(completion: @escaping (OrderState) -> Void) {
-        completion(.processing)
+    func makeOrder(callback: @escaping OrderCallback) {
+        Task { await callback(.processing) }
         sleep(UInt32.random(in: 3...7))
     }
 }

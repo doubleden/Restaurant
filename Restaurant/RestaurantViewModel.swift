@@ -41,11 +41,9 @@ private extension RestaurantViewModel {
     func give<T: Worker>(order: Order, to worker: T) async {
         await worker.makeOrder { [weak self] orderState in
             guard let self else { return }
-            guard let orderIndex = getOrderIndex(by: order.id) else { return }
             
-            Task { @MainActor in
-                self.orders[orderIndex].state = orderState
-            }
+            guard let orderIndex = self.getOrderIndex(by: order.id) else { return }
+            self.orders[orderIndex].state = orderState
         }
     }
 }
