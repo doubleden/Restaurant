@@ -9,7 +9,8 @@ import Foundation
 
 actor DeliveryMen: Worker {
     func makeOrder(callback: @escaping OrderCallback) {
-        Task {  await callback(.delivering) }
-        sleep(UInt32.random(in: 2...5))
+        let timePreparation = Int.random(in: 2...5)
+        Task { await (callback(.delivering, timePreparation)) }
+        sleep(UInt32(timePreparation))
     }
 }

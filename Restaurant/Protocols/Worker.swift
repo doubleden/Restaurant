@@ -7,7 +7,7 @@
 
 import Foundation
 
-typealias OrderCallback = @MainActor @Sendable (OrderState) -> Void
+typealias OrderCallback = @MainActor @Sendable (OrderState, Int) -> Void
 
 protocol Worker: Sendable {
     func makeOrder(callback: @escaping OrderCallback) async

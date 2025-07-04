@@ -29,11 +29,19 @@ fileprivate struct RowView: View {
     let order: Order
     
     var body: some View {
-        HStack {
-            Spacer()
-            Text(order.title)
-            Text(order.state.description)
-            Spacer()
+        VStack(alignment: .leading) {
+            HStack {
+                Text(order.title)
+                Text(order.state.description)
+                Spacer()
+            }
+            
+            Text("Время ожидания: \(order.preparationTime) сек")
+                .opacity(
+                    order.state == .processing
+                    || order.state == .delivering
+                    ? 1 : 0
+                )
         }
     }
 }

@@ -31,4 +31,5 @@ struct Order: Identifiable {
     var title = ["Суп", "Котлеты", "Салат"].randomElement() ?? "Суп"
     var isFoodReady = false
     var state = OrderState.inQueue
+    var preparationTime = 0
 }
