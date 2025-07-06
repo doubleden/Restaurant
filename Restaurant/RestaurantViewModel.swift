@@ -44,10 +44,12 @@ private extension RestaurantViewModel {
         await worker.makeOrder { [weak self] orderState, timePreparation in
             guard let self else { return }
             
-            guard let orderIndex = self.getOrderIndex(by: order.id) else { return }
-            self.orders[orderIndex].state = orderState
-            self.orders[orderIndex].preparationTime = timePreparation
-            self.startTimer(for: order)
+            Task { @MainActor in
+                guard let orderIndex = self.getOrderIndex(by: order.id) else { return }
+                self.orders[orderIndex].state = orderState
+                self.orders[orderIndex].preparationTime = timePreparation
+                self.startTimer(for: order)
+            }
         }
     }
     
